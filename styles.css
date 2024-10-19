@@ -406,7 +406,7 @@ body {
 }
 
 .slide-image {
-    background-image: url('C:/Users/Image First/Downloads/adva/adva/images/hero1.jpg');
+    background-image: url('hero1.jpg');
     background-attachment: fixed;
     width: 100%;
     height: 100%;
