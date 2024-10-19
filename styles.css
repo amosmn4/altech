@@ -662,7 +662,7 @@ section h2::after {
 }
 
 
-/* Project Slider 
+/* Project Slider*/ 
 .project-slider {
     display: flex;
     overflow-x: hidden;
@@ -726,7 +726,7 @@ section h2::after {
 .dot.active {
     background-color: var(--primary-color1);
 }
-*/
+
 /* Contact Form */
 .contact-wrapper {
     display: flex;
