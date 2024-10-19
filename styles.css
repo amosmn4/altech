@@ -656,6 +656,10 @@ section h2::after {
     object-fit: cover;
 }
 
+/* Alternating Layout: Image on the Right for Every Even Project */
+.project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
 
 /* Project Slider 
