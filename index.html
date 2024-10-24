@@ -20,7 +20,7 @@
         <div class="announcement-bar">
             <div class="container">
                 <div class="announcement-content">
-                    <span class="blink"><i class="fas fa-bullhorn"></i> Coming Soon: New Cloud Services!</span>
+                    <span class="blink"><i class="fas fa-bullhorn"></i> Coming Soon: New Cloud Services! <a href="#contact">Learn More</a></span>
                     <span class="blink"><i class="fas fa-gift"></i> Special Offer: Free Consultation</span>
                     <span class="blink"><i class="fas fa-certificate"></i> ISO 27001 Certified</span>
                 </div>
@@ -31,14 +31,14 @@
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="logo.jpg" alt="Altech Africa Logo" class="light-logo">
-                        <img src="logo1.png" alt="Altech Africa Logo" class="dark-logo">
+                        <img src="logo1.png" alt="Altech Africa Logo" class="light-logo">
+                        <img src="logo.jpg" alt="Altech Africa Logo" class="dark-logo">
                     </a>
                 </div>
 
                 <div class="header-center">
                     <h2 class="company-title">Altech Africa Limited</h2>
-                    <p class="company-tagline">Your Partner in Professional Technical Services</p>
+                    <p class="company-tagline">Transforming businesses through technology</p>
                 </div>
 
                 <div class="header-right">
@@ -55,38 +55,47 @@
                         </button>
                     </div>
 
+                    <!-- Mobile toggle button -->
+                    <button class="mobile-toggle" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li class="has-dropdown">
-                            <a href="about.html">About</a>
-                            <ul class="dropdown">
-                                <li><a href="#team">Our Team</a></li>
-                                <li><a href="#vision">Vision & Mission</a></li>
-                                <li><a href="#history">Our History</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html">Services</a>
-                            <ul class="dropdown">
-                                <li><a href="#integration">System Integration</a></li>
-                                <li><a href="#consulting">IT Consulting</a></li>
-                                <li><a href="#infrastructure">Infrastructure</a></li>
-                                <li><a href="#cloud">Cloud Solutions</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="projects.html">Projects</a>
-                            <ul class="dropdown">
-                                <li><a href="#recent">Recent Projects</a></li>
-                                <li><a href="#featured">Featured Work</a></li>
-                                <li><a href="#case-studies">Case Studies</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="#" class="active">Home</a></li>
+                            <li class="has-dropdown">
+                                <a href="about.html">About</a>
+                                <ul class="dropdown">
+                                    <li><a href="#our-story">Our Story</a></li>
+                                    <li><a href="#team">Team</a></li>
+                                    <li><a href="#vision-mission">Vision & Mission</a></li>
+                                    <li><a href="#history">Our History</a></li> 
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="services.html">Services</a>
+                                <ul class="dropdown">
+                                    <li><a href="#systems-integration">Systems Integration</a></li>
+                                    <li><a href="#consultancy">Consultancy</a></li>
+                                    <li><a href="#project-management">Project Management</a></li>
+                                    <li><a href="#network-infrastructure">Network Infrastructure</a></li>
+                                    <li><a href="#cloud">Cloud Solutions</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="projects.html">Projects</a>
+                                <ul class="dropdown">
+                                    <li><a href="#recent">Recent Projects</a></li>
+                                    <li><a href="#featured">Featured Work</a></li>
+                                    <li><a href="#case-studies">Case Studies</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -110,7 +119,7 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <div class="slide-image" style="background-image: url('low-angle-shot-radio-telescope-near-westerbork-netherlands.jpg')">
+                    <div class="slide-image" style="background-image: url('./low-angle-shot-radio-telescope-near-westerbork-netherlands.jpg')">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h1>Innovative Solutions</h1>
@@ -123,7 +132,7 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <div class="slide-image" style="background-image: url('ruiru park.jpg')">
+                    <div class="slide-image" style="background-image: url('./ruiru park.jpg')">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h1>Expert Consultation</h1>
@@ -137,16 +146,11 @@
                 </div>
             </div>
             <div class="slider-controls">
-                <div class="slider-arrows">
-                    <button class="arrow prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="arrow next"><i class="fas fa-chevron-right"></i></button>
-                </div>
                 <div class="slider-dots"></div>
             </div>
         </section>
 
-
-  <div class="container-fluid">
+        <!-- About Section -->
         <section id="about">
             <div class="container">
                 <h2>About Us</h2>
@@ -155,9 +159,14 @@
             </div>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="section">
             <div class="container">
-                <h2>Our Services</h2>
+                <div class="section-header">
+                    <span class="section-subtitle">What We Do Best</span>
+                    <h2>Our Services</h2>
+                    <p>Comprehensive solutions for your technical needs</p>
+                </div>
                 <div class="tabs">
                     <button class="tab-btn active" data-tab="integration">Systems Integration</button>
                     <button class="tab-btn" data-tab="consultancy">Consultancy</button>
@@ -168,16 +177,26 @@
                     <div id="integration" class="tab-pane active">
                         <h3>Systems Integration</h3>
                         <p>We specialize in integrating diverse technology systems to deliver comprehensive business solutions. Our expert team ensures seamless integration of your communication and IT infrastructure.</p>
+                        <ul class="features">
+                            <i class="fas fa-check"></i> Custom Solutions
+                            <p><i class="fas fa-check"></i> API Integration</p>
+                            <p><i class="fas fa-check"></i> Legacy System Support</p>
+                        </ul>
+                        <a href="#" class="learn-more">
+                            Learn More 
+                            <i class="fas fa-arrow-right"></i>
+                            <span class="hover-effect"></span>
+                        </a>
                     </div>
-                    <div class="tab-pane" id="consultancy">
+                    <div id="consultancy" class="tab-pane">
                         <h3>Consultancy</h3>
                         <p>Our consultancy services provide expert advice on technology strategies, system design, and implementation. We help you make informed decisions to optimize your IT investments.</p>
                     </div>
-                    <div class="tab-pane" id="project-management">
+                    <div id="project-management" class="tab-pane">
                         <h3>Project Management</h3>
                         <p>We offer end-to-end project management services, ensuring your technology initiatives are delivered on time, within budget, and to the highest quality standards.</p>
                     </div>
-                    <div class="tab-pane" id="network">
+                    <div id="network" class="tab-pane">
                         <h3>Network Infrastructure</h3>
                         <p>From design to implementation, we provide comprehensive network infrastructure solutions. Our services include structured cabling, wireless networks, and network security.</p>
                     </div>
@@ -185,50 +204,63 @@
             </div>
         </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-container">
-                <div class="project-item">
-                    <div class="project-content">
-                        <h3>American Towers Limited</h3>
-                        <p>Built over 150 green field sites in 2020 and 2021</p>
-                        <a href="#" class="read-more">Learn More</a>
-                    </div>
-                    <div class="project-image">
-                        <img src="Site Build by Altech.jpg" alt="American Towers Limited Project">
-                    </div>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Work</span>
+                    <h2>Featured Projects</h2>
+                    <p>Success stories across industries</p>
                 </div>
-                <div class="project-item">
-                    <div class="project-content">                        
-                        <h3>Safaricom FTTB</h3>
-                        <p>Connected over 50 blocks in Nairobi</p>
+                <div class="project-container">
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3>American Towers Limited</h3>
+                            <p>Built over 150 green field sites in 2020 and 2021</p>
+                            <a href="projects.html" class="read-more">View Details</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="Site Build by Altech.jpg" alt="American Towers Limited Project">
+                        </div>
                     </div>
-                    <div class="project-image">
-                        <img src="close-up-communication-tower.jpg" alt="Safaricom FTTB Project">
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3>Safaricom FTTB</h3>
+                            <p>Connected over 50 blocks in Nairobi</p>
+                            <a href="projects.html" class="read-more">View Details</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="close-up-communication-tower.jpg" alt="Safaricom FTTB Project">
+                        </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-content">                        
-                        <h3>Orange TKL GSM & Transmission</h3>
-                        <p>Prepared over 250 site installation documents</p>
-                    </div>
-                    <div class="project-image">
-                        <img src="Altech Africa team installing microwave dish.jpg" alt="Safaricom FTTB Project">
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3>Orange TKL GSM & Transmission</h3>
+                            <p>Prepared over 250 site installation documents</p>
+                            <a href="projects.html" class="read-more">View Details</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="Altech Africa team installing microwave dish.jpg" alt="Orange TKL GSM Project">
+                        </div>
                     </div>
                 </div>
                 <div class="slider-controls">
-                    <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots"></div>
-                    <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                    <div class="slider-arrows">
+                        <button class="arrow prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="arrow next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <div class="container">
-                <h2>Contact Us</h2>
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2>Contact Us</h2>
+                    <p>Ready to start your project?</p>
+                </div>
                 <div class="contact-wrapper">
                     <form id="contact-form">
                         <div class="form-group">
@@ -247,39 +279,46 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
                     <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
                         <h3>Get in Touch</h3>
-                        <p>Fatima Courts Office No. 11, Argwings Kodhek/ Marcurcus Garvey, Nairobi, Kenya</p>
+                        <p>Fatima Courts Office No. 11, <br>Argwings Kodhek/Marcurcus Garvey,</br> Nairobi, Kenya</p>
                         <p>Phone: 0734800488</p>
                         <p>Email: INFO@ALTECHAFRICA.CO.KE</p>
                     </div>
                 </div>
-                <div id="map">
-                 <h2>Altech Africa Ltd location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8019878679565!2d36.78786072473674!3d-1.2932669856332966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10a31a957f37%3A0xe7ec6c958b81fd46!2sFatima%20Apartments!5e0!3m2!1sen!2ske!4v1729237417375!5m2!1sen!2ske" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Map of Altech Africa Ltd location"></iframe>
-                </div>
             </div>
         </section>
+                <section id="map">
+                    <div class="container">
+                       <div id="map">
+                          <h2>Altech Africa Ltd Location</h2>
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8019878679565!2d36.78786072473674!3d-1.2932669856332966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10a31a957f37%3A0xe7ec6c958b81fd46!2sFatima%20Apartments!5e0!3m2!1sen!2ske!4v1729237417375!5m2!1sen!2ske" 
+                           width="100%" height="450" style="border:0;" 
+                           allowfullscreen="" loading="lazy" 
+                           referrerpolicy="no-referrer-when-downgrade" alt="Map of Altech Africa Ltd location">
+                           </iframe>
+                       </div>
+                    </div>
+                </section>
+            </div>
     </main>
 
-
-
-
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-about">
-                        <img src="logo.jpg" alt="Altech Africa Logo" class="footer-logo">
+                        <img src="images/logo.jpg" alt="Altech Africa Logo" class="footer-logo">
                         <p>Leading provider of professional technical services in Africa</p>
                         <div class="social-links">
                             <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     
@@ -301,6 +340,7 @@
                             <li><a href="#">IT Consulting</a></li>
                             <li><a href="#">Infrastructure</a></li>
                             <li><a href="#">Cloud Solutions</a></li>
+                            <li><a href="#">Project Management</a></li>
                         </ul>
                     </div>
                     
@@ -332,10 +372,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </body>
 </html>
-
-
-
-
-
