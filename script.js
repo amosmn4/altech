@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.classList.toggle('active');
         navList.classList.toggle('open');
     });
+
     // Back to Top Button
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
@@ -34,84 +35,65 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
 
-     // Tab functionality
-     const tabButtons = document.querySelectorAll('.tab-btn');
-     const tabPanes = document.querySelectorAll('.tab-pane');
- 
-     tabButtons.forEach(button => {
-         button.addEventListener('click', () => {
-             // Remove active class from all buttons and panes
-             tabButtons.forEach(btn => btn.classList.remove('active'));
-             tabPanes.forEach(pane => pane.classList.remove('active'));
- 
-             // Add active class to clicked button and corresponding pane
-             button.classList.add('active');
-             const tabId = button.getAttribute('data-tab');
-             document.getElementById(tabId).classList.add('active');
-         });
-     });
- 
-     // Dropdown functionality
-     const dropdowns = document.querySelectorAll('.has-dropdown');
-     
-     dropdowns.forEach(dropdown => {
-         const link = dropdown.querySelector('a');
-         const menu = dropdown.querySelector('.dropdown');
-         
-         link.addEventListener('click', (e) => {
-             e.preventDefault();
-             menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-         });
- 
-         // Close dropdown when clicking outside
-         document.addEventListener('click', (e) => {
-             if (!dropdown.contains(e.target)) {
-                 menu.style.display = 'none';
-             }
-         });
-     });
- 
-     // Project slider functionality
-     const projectItems = document.querySelectorAll('.project-item');
-     let currentProject = 0;
- 
-     function showProject(index) {
-         projectItems.forEach((item, i) => {
-             item.style.display = i === index ? 'flex' : 'none';
-         });
-     }
- 
-     // Initialize dots
-     const dotsContainer = document.querySelector('.slider-dots');
-     projectItems.forEach((_, i) => {
-         const dot = document.createElement('span');
-         dot.classList.add('dot');
-         if (i === 0) dot.classList.add('active');
-         dot.addEventListener('click', () => {
-             currentProject = i;
-             showProject(currentProject);
-             updateDots();
-         });
-         dotsContainer.appendChild(dot);
-     });
- 
-     function updateDots() {
-         document.querySelectorAll('.dot').forEach((dot, i) => {
-             dot.classList.toggle('active', i === currentProject);
-         });
-     }
- 
-     // Show initial project
-     showProject(currentProject);
- 
-     // Auto advance projects
-     setInterval(() => {
-         currentProject = (currentProject + 1) % projectItems.length;
-         showProject(currentProject);
-         updateDots();
-     }, 5000);
- 
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and panes
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding pane
+            button.classList.add('active');
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Dropdown functionality handled via CSS hover, removed conflicting JS handling
+
+    // Project slider functionality
+    const projectItems = document.querySelectorAll('.project-item');
+    let currentProject = 0;
+
+    function showProject(index) {
+        projectItems.forEach((item, i) => {
+            item.style.display = i === index ? 'flex' : 'none';
+        });
+    }
+
+    // Initialize dots
+    const dotsContainer = document.querySelector('.slider-dots');
+    projectItems.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentProject = i;
+            showProject(currentProject);
+            updateDots();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    function updateDots() {
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentProject);
+        });
+    }
+
+    // Show initial project
+    showProject(currentProject);
+
+    // Auto advance projects
+    setInterval(() => {
+        currentProject = (currentProject + 1) % projectItems.length;
+        showProject(currentProject);
+        updateDots();
+    }, 5000);
+
     // Hero Section Slider
     const heroSlides = document.querySelectorAll('.slide');
     let currentSlide = 0;
@@ -156,6 +138,34 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
+        }
+    });
+
+    // Dark/Light Theme Toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+        }
+    });
+
+
+    // Search Functionality
+    const searchBox = document.querySelector('.search-box input');
+    const searchResultsContainer = document.createElement('div');
+    searchResultsContainer.classList.add('search-results');
+    searchBox.addEventListener('input', () => {
+        const query = searchBox.value.toLowerCase();
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+        if (query) {
+            const results = [...document.querySelectorAll('section')]
+                .filter(section => section.innerText.toLowerCase().includes(query))
+                .map(section => `<p>${section.innerText}</p>`);
+            searchResultsContainer.innerHTML = results.join('');
+            searchBox.parentNode.appendChild(searchResultsContainer);
         }
     });
 });
